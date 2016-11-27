@@ -11,7 +11,8 @@ if [[ $unamestr == 'Linux' ]]; then
 elif [[ $unamestr == 'Darwin' ]]; then
   platform='darwin'
 fi
-
+# Tmuxinator
+alias mux='tmuxinator'
 # YADR support
 alias yav='yadr vim-add-plugin'
 alias ydv='yadr vim-delete-plugin'
@@ -48,7 +49,7 @@ TRAPHUP() {
   source $yadr/zsh/aliases.zsh
 }
 
-alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
+alias ae='vi $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 

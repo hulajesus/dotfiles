@@ -14,3 +14,15 @@ bindkey -s "^[Op" "0"
 bindkey -s "^[Ol" "."
 bindkey -s "^[OM" "^M"
 
+# switch between vim & shell by ctrl-z
+fancy-ctrl-z () {
+ if [[ $#BUFFER -eq 0 ]]; then
+     BUFFER="fg"
+   zle accept-line
+ else
+   zle push-input
+   zle clear-screen
+ fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z

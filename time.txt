@@ -1,0 +1,275 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- VIM STARTING ---
+000.156  000.147: Allocated generic buffers
+000.547  000.391: locale set
+000.581  000.034: GUI prepared
+000.585  000.004: clipboard setup
+000.596  000.011: window checked
+001.307  000.711: inits 1
+001.496  000.189: parsing arguments
+006.197  004.701: expanding arguments
+010.667  004.470: shell init
+010.810  000.143: inits 2
+014.694  003.884: init highlight
+015.270  000.366  000.366: sourcing $VIM/vimrc
+015.690  000.017  000.017: sourcing /Users/jesushula/.vimrc.before
+016.692  000.588  000.588: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+016.953  000.988  000.400: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/synload.vim
+045.863  000.059  000.059: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/autoload/paste.vim
+062.383  017.127  017.068: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/menu.vim
+062.422  045.325  028.198: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+062.490  046.663  000.350: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/syntax.vim
+065.029  002.337  002.337: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/ftoff.vim
+065.358  000.185  000.185: sourcing /Users/jesushula/.vim/bundle/vundle/autoload/vundle.vim
+065.693  000.244  000.244: sourcing /Users/jesushula/.vim/bundle/vundle/autoload/vundle/config.vim
+069.601  003.454  003.454: sourcing /Users/jesushula/.vim/vundles/ruby.vundle
+084.894  015.125  015.125: sourcing /Users/jesushula/.vim/vundles/languages.vundle
+090.026  004.876  004.876: sourcing /Users/jesushula/.vim/vundles/git.vundle
+099.489  009.181  009.181: sourcing /Users/jesushula/.vim/vundles/appearance.vundle
+119.013  019.200  019.200: sourcing /Users/jesushula/.vim/vundles/textobjects.vundle
+129.957  010.571  010.571: sourcing /Users/jesushula/.vim/vundles/search.vundle
+139.531  009.112  009.112: sourcing /Users/jesushula/.vim/vundles/project.vundle
+213.978  073.940  073.940: sourcing /Users/jesushula/.vim/vundles/vim-improvements.vundle
+237.198  000.708  000.708: sourcing /Users/jesushula/.vim/bundle/vim-ruby/ftdetect/ruby.vim
+238.114  000.885  000.885: sourcing /Users/jesushula/.vim/bundle/vim-ruby/ftdetect/ruby_extra.vim
+238.235  000.047  000.047: sourcing /Users/jesushula/.vim/bundle/rspec.vim/ftdetect/rspec.vim
+238.765  000.316  000.316: sourcing /Users/jesushula/.vim/bundle/vim-javascript/ftdetect/javascript.vim
+238.923  000.054  000.054: sourcing /Users/jesushula/.vim/bundle/vim-es6/ftdetect/es6.vim
+239.203  000.201  000.201: sourcing /Users/jesushula/.vim/bundle/vim-go/ftdetect/gofiletype.vim
+239.343  000.060  000.060: sourcing /Users/jesushula/.vim/bundle/vim-solidity/ftdetect/solidity.vim
+239.664  000.187  000.187: sourcing /Users/jesushula/.vim/bundle/nginx-contrib-vim/ftdetect/nginx.vim
+239.938  000.171  000.171: sourcing /Users/jesushula/.vim/bundle/vim-jsx/ftdetect/javascript.vim
+240.524  000.496  000.496: sourcing /Users/jesushula/.vim/bundle/vim-git/ftdetect/git.vim
+240.734  000.089  000.089: sourcing /Users/jesushula/.vim/bundle/tmux.vim/ftdetect/tmux.vim
+242.264  027.652  024.438: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+243.325  000.048  000.048: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+244.355  000.037  000.037: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+244.847  182.274  006.312: sourcing /Users/jesushula/.vim/vundles.vim
+245.543  000.018  000.018: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+246.782  000.021  000.021: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/ftplugin.vim
+247.930  000.020  000.020: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/filetype.vim
+248.983  000.012  000.012: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/indent.vim
+260.148  000.072  000.072: sourcing /Users/jesushula/.vim/settings/abbr.vim
+260.292  000.022  000.022: sourcing /Users/jesushula/.vim/settings/ag.vim
+260.414  000.011  000.011: sourcing /Users/jesushula/.vim/settings/autotag.vim
+260.551  000.029  000.029: sourcing /Users/jesushula/.vim/settings/camelcasemotion.vim
+260.910  000.253  000.253: sourcing /Users/jesushula/.vim/settings/ctrlp.vim
+261.370  000.047  000.047: sourcing /Users/jesushula/.vim/settings/easymotion.vim
+261.741  000.212  000.212: sourcing /Users/jesushula/.vim/settings/es6.vim
+262.043  000.025  000.025: sourcing /Users/jesushula/.vim/settings/fugitive.vim
+262.356  000.193  000.193: sourcing /Users/jesushula/.vim/settings/gh-markdown.vim
+262.493  000.018  000.018: sourcing /Users/jesushula/.vim/settings/gotofile.vim
+262.625  000.023  000.023: sourcing /Users/jesushula/.vim/settings/grep.vim
+262.751  000.019  000.019: sourcing /Users/jesushula/.vim/settings/gundo.vim
+262.952  000.088  000.088: sourcing /Users/jesushula/.vim/settings/lightline.vim
+263.146  000.078  000.078: sourcing /Users/jesushula/.vim/settings/neocomplete.vim
+263.307  000.020  000.020: sourcing /Users/jesushula/.vim/settings/nerdtree-git-plugin.vim
+263.444  000.017  000.017: sourcing /Users/jesushula/.vim/settings/NERDtree-tabs.vim
+263.575  000.017  000.017: sourcing /Users/jesushula/.vim/settings/NERDtree.vim
+263.828  000.139  000.139: sourcing /Users/jesushula/.vim/settings/next-textobject.vim
+263.983  000.034  000.034: sourcing /Users/jesushula/.vim/settings/open-changed-files.vim
+264.122  000.020  000.020: sourcing /Users/jesushula/.vim/settings/outerblock.vim
+264.250  000.015  000.015: sourcing /Users/jesushula/.vim/settings/path.vim
+264.401  000.037  000.037: sourcing /Users/jesushula/.vim/settings/quickfix-search.vim
+264.534  000.019  000.019: sourcing /Users/jesushula/.vim/settings/rails.vim
+264.687  000.041  000.041: sourcing /Users/jesushula/.vim/settings/rspec.vim
+264.857  000.057  000.057: sourcing /Users/jesushula/.vim/settings/search.vim
+265.001  000.015  000.015: sourcing /Users/jesushula/.vim/settings/showmarks.vim
+265.264  000.027  000.027: sourcing /Users/jesushula/.vim/settings/smart_jump_to_tag.vim
+265.389  000.015  000.015: sourcing /Users/jesushula/.vim/settings/sneak.vim
+265.517  000.021  000.021: sourcing /Users/jesushula/.vim/settings/surround.vim
+265.752  000.128  000.128: sourcing /Users/jesushula/.vim/settings/syntastic.vim
+265.883  000.018  000.018: sourcing /Users/jesushula/.vim/settings/tComment.vim
+266.006  000.015  000.015: sourcing /Users/jesushula/.vim/settings/tidy.vim
+266.140  000.029  000.029: sourcing /Users/jesushula/.vim/settings/unimpaired.vim
+266.263  000.016  000.016: sourcing /Users/jesushula/.vim/settings/vim-closetag.vim
+266.388  000.015  000.015: sourcing /Users/jesushula/.vim/settings/vim-conflicted.vim
+267.135  000.287  000.287: sourcing /Users/jesushula/.vim/bundle/vim-expand-region/autoload/expand_region.vim
+267.290  000.796  000.509: sourcing /Users/jesushula/.vim/settings/vim-expand-region.vim
+267.591  000.095  000.095: sourcing /Users/jesushula/.vim/settings/vim-fugitive.vim
+267.723  000.016  000.016: sourcing /Users/jesushula/.vim/settings/vim-gitgutter.vim
+267.848  000.016  000.016: sourcing /Users/jesushula/.vim/settings/vim-indent-guides.vim
+267.967  000.011  000.011: sourcing /Users/jesushula/.vim/settings/vim-jsx.vim
+268.099  000.026  000.026: sourcing /Users/jesushula/.vim/settings/vim-multiple-cursors.vim
+268.382  000.076  000.076: sourcing /Users/jesushula/.vim/settings/vim-rubytest.vim
+268.541  000.017  000.017: sourcing /Users/jesushula/.vim/settings/vim-session.vim
+268.695  000.035  000.035: sourcing /Users/jesushula/.vim/settings/vim-tmux-navigator.vim
+268.819  000.014  000.014: sourcing /Users/jesushula/.vim/settings/vim-web-indent.vim
+276.809  000.238  000.238: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+278.527  000.221  000.221: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+279.885  000.204  000.204: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/syntax/syncolor.vim
+281.095  011.895  011.232: sourcing /Users/jesushula/.vim/bundle/molokai/colors/molokai.vim
+281.107  012.179  000.284: sourcing /Users/jesushula/.vim/settings/yadr-appearance.vim
+281.285  000.026  000.026: sourcing /Users/jesushula/.vim/settings/yadr-guioptions.vim
+281.652  000.176  000.176: sourcing /Users/jesushula/.vim/settings/yadr-keymap-mac.vim
+282.172  000.402  000.402: sourcing /Users/jesushula/.vim/settings/yadr-keymap.vim
+282.428  000.021  000.021: sourcing /Users/jesushula/.vim/settings/yadr-sudo-write.vim
+282.576  000.035  000.035: sourcing /Users/jesushula/.vim/settings/yadr-whitespace-killer.vim
+282.725  000.039  000.039: sourcing /Users/jesushula/.vim/settings/yadr-window-killer.vim
+282.893  000.060  000.060: sourcing /Users/jesushula/.vim/settings/yadr-wrapping.vim
+283.032  000.026  000.026: sourcing /Users/jesushula/.vim/settings/yankring.vim
+283.059  033.413  017.542: sourcing /Users/jesushula/.yadr/vim/settings.vim
+283.067  267.658  005.220: sourcing $HOME/.vimrc
+283.071  000.353: sourcing vimrc file(s)
+283.860  000.040  000.040: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/addparameter.vim
+283.920  000.030  000.030: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/addparameternb.vim
+283.970  000.025  000.025: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/extractconstant.vim
+284.196  000.200  000.200: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/extractmethod.vim
+284.255  000.033  000.033: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/extractvariable.vim
+284.314  000.035  000.035: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/inlinetemp.vim
+284.372  000.034  000.034: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/introducevariable.vim
+284.450  000.054  000.054: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/postconditional.vim
+284.517  000.042  000.042: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/renameinstancevariable.vim
+284.569  000.028  000.028: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/renamelocalvariable.vim
+284.618  000.025  000.025: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/refactorings/general/rspec_extractlet.vim
+287.778  003.136  003.136: sourcing /Users/jesushula/.vim/bundle/vim-ruby-refactoring/plugin/ruby-refactoring.vim
+289.748  001.863  001.863: sourcing /Users/jesushula/.vim/bundle/vim-rake/plugin/rake.vim
+290.001  000.105  000.105: sourcing /Users/jesushula/.vim/bundle/vim-spec-finder/plugin/spec-finder.vim
+290.140  000.032  000.032: sourcing /Users/jesushula/.vim/bundle/vim-change-hash-syntax/plugin/change-hash-syntax.vim
+292.796  002.561  002.561: sourcing /Users/jesushula/.vim/bundle/vim-bundler/plugin/bundler.vim
+293.336  000.425  000.425: sourcing /Users/jesushula/.vim/bundle/vim-rubytest/plugin/rubytest.vim
+294.201  000.090  000.090: sourcing /Users/jesushula/.vim/bundle/vim-addon-mw-utils/autoload/funcref.vim
+294.779  001.334  001.244: sourcing /Users/jesushula/.vim/bundle/vim-snipmate/plugin/snipMate.vim
+294.990  000.053  000.053: sourcing /Users/jesushula/.vim/bundle/vim-snippets/plugin/vimsnippets.vim
+296.242  000.069  000.069: sourcing /Users/jesushula/.vim/bundle/vim-markdown-preview/plugin/vmp.vim
+296.791  000.403  000.403: sourcing /Users/jesushula/.vim/bundle/vim-go/plugin/go.vim
+297.445  000.403  000.403: sourcing /Users/jesushula/.vim/bundle/vim-closetag/plugin/closetag.vim
+297.673  000.054  000.054: sourcing /Users/jesushula/.vim/bundle/vim-html-escape/plugin/htmlescape.vim
+302.814  004.986  004.986: sourcing /Users/jesushula/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+303.769  000.116  000.116: sourcing /Users/jesushula/.vim/bundle/vim-gitgutter/autoload/gitgutter/highlight.vim
+304.680  001.705  001.589: sourcing /Users/jesushula/.vim/bundle/vim-gitgutter/plugin/gitgutter.vim
+304.986  000.184  000.184: sourcing /Users/jesushula/.vim/bundle/vim-conflicted/plugin/conflicted.vim
+305.450  000.220  000.220: sourcing /Users/jesushula/.vim/bundle/lightline.vim/plugin/lightline.vim
+313.271  007.676  007.676: sourcing /Users/jesushula/.vim/bundle/showmarks/plugin/showmarks.vim
+314.171  000.726  000.726: sourcing /Users/jesushula/.vim/bundle/csapprox/plugin/CSApprox.vim
+314.402  000.109  000.109: sourcing /Users/jesushula/.vim/bundle/vim-indentobject/plugin/indentobject.vim
+315.447  000.571  000.571: sourcing /Users/jesushula/.vim/bundle/vim-textobj-user/autoload/textobj/user.vim
+317.164  002.617  002.046: sourcing /Users/jesushula/.vim/bundle/vim-textobj-rubysymbol/plugin/textobj/rubysymbol.vim
+317.521  000.177  000.177: sourcing /Users/jesushula/.vim/bundle/textobj-word-column.vim/plugin/textobj/word-column.vim
+331.167  013.499  013.499: sourcing /Users/jesushula/.vim/bundle/vim-textobj-entire/plugin/textobj/entire.vim
+334.488  003.127  003.127: sourcing /Users/jesushula/.vim/bundle/vim-textobj-function/plugin/textobj/function.vim
+347.714  013.042  013.042: sourcing /Users/jesushula/.vim/bundle/vim-textobj-underscore/plugin/textobj/underscore.vim
+360.812  012.863  012.863: sourcing /Users/jesushula/.vim/bundle/vim-textobj-rubyblock/plugin/textobj/rubyblock.vim
+372.132  011.159  011.159: sourcing /Users/jesushula/.vim/bundle/targets.vim/plugin/targets.vim
+372.551  000.260  000.260: sourcing /Users/jesushula/.vim/bundle/vim-expand-region/plugin/expand_region.vim
+375.196  002.537  002.537: sourcing /Users/jesushula/.vim/bundle/vim-sneak/plugin/sneak.vim
+375.418  000.076  000.076: sourcing /Users/jesushula/.vim/bundle/ag.vim/plugin/ag.vim
+375.911  000.390  000.390: sourcing /Users/jesushula/.vim/bundle/IndexedSearch/plugin/IndexedSearch.vim
+376.116  000.094  000.094: sourcing /Users/jesushula/.vim/bundle/vim-visual-star-search/plugin/visual-star-search.vim
+376.497  000.283  000.283: sourcing /Users/jesushula/.vim/bundle/greplace.vim/plugin/greplace.vim
+385.599  008.996  008.996: sourcing /Users/jesushula/.vim/bundle/vim-easymotion/plugin/EasyMotion.vim
+386.790  000.158  000.158: sourcing /Users/jesushula/.vim/bundle/nerdtree/autoload/nerdtree.vim
+388.323  000.513  000.513: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/path.vim
+388.843  000.134  000.134: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/menu_controller.vim
+389.290  000.091  000.091: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/menu_item.vim
+389.759  000.120  000.120: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/key_map.vim
+390.331  000.220  000.220: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/bookmark.vim
+391.018  000.314  000.314: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/tree_file_node.vim
+392.131  000.740  000.740: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/tree_dir_node.vim
+393.403  000.699  000.699: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/opener.vim
+394.937  000.812  000.812: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/creator.vim
+395.639  000.189  000.189: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/flag_set.vim
+396.354  000.327  000.327: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/nerdtree.vim
+397.374  000.661  000.661: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/ui.vim
+397.834  000.051  000.051: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/event.vim
+398.526  000.120  000.120: sourcing /Users/jesushula/.vim/bundle/nerdtree/lib/nerdtree/notifier.vim
+399.527  000.569  000.569: sourcing /Users/jesushula/.vim/bundle/nerdtree/autoload/nerdtree/ui_glue.vim
+422.322  001.769  001.769: sourcing /Users/jesushula/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
+423.912  001.097  001.097: sourcing /Users/jesushula/.vim/bundle/vim-nerdtree-tabs/nerdtree_plugin/vim-nerdtree-tabs.vim
+424.216  000.126  000.126: sourcing /Users/jesushula/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+424.875  000.627  000.627: sourcing /Users/jesushula/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+426.885  041.106  031.769: sourcing /Users/jesushula/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+428.011  000.267  000.267: sourcing /Users/jesushula/.vim/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+428.325  001.313  001.046: sourcing /Users/jesushula/.vim/bundle/ctrlp.vim/plugin/ctrlp.vim
+428.553  000.052  000.052: sourcing /Users/jesushula/.vim/bundle/vim-misc/plugin/xolox/misc.vim
+429.092  000.025  000.025: sourcing /Users/jesushula/.vim/bundle/vim-misc/autoload/xolox/misc.vim
+429.745  000.207  000.207: sourcing /Users/jesushula/.vim/bundle/vim-misc/autoload/xolox/misc/os.vim
+430.494  000.070  000.070: sourcing /Users/jesushula/.vim/bundle/vim-misc/autoload/xolox/misc/cursorhold.vim
+430.606  001.952  001.650: sourcing /Users/jesushula/.vim/bundle/vim-session/plugin/session.vim
+431.187  000.049  000.049: sourcing /Users/jesushula/.vim/bundle/splitjoin.vim/autoload/sj/settings.vim
+431.456  000.736  000.687: sourcing /Users/jesushula/.vim/bundle/splitjoin.vim/plugin/splitjoin.vim
+432.901  000.461  000.461: sourcing /Users/jesushula/.vim/bundle/delimitMate/autoload/delimitMate.vim
+436.239  004.672  004.211: sourcing /Users/jesushula/.vim/bundle/delimitMate/plugin/delimitMate.vim
+436.592  000.068  000.068: sourcing /Users/jesushula/.vim/bundle/neocomplete/plugin/neocomplete/buffer.vim
+436.675  000.054  000.054: sourcing /Users/jesushula/.vim/bundle/neocomplete/plugin/neocomplete/dictionary.vim
+436.752  000.051  000.051: sourcing /Users/jesushula/.vim/bundle/neocomplete/plugin/neocomplete/member.vim
+436.826  000.049  000.049: sourcing /Users/jesushula/.vim/bundle/neocomplete/plugin/neocomplete/tag.vim
+436.963  000.112  000.112: sourcing /Users/jesushula/.vim/bundle/neocomplete/plugin/neocomplete.vim
+437.285  000.210  000.210: sourcing /Users/jesushula/.vim/bundle/change-inside-surroundings.vim/plugin/change-inside-surroundings.vim
+437.660  000.270  000.270: sourcing /Users/jesushula/.vim/bundle/tabular/plugin/Tabular.vim
+442.581  004.816  004.816: sourcing /Users/jesushula/.vim/bundle/tcomment_vim/plugin/tcomment.vim
+444.087  001.360  001.360: sourcing /Users/jesushula/.vim/bundle/camelcasemotion/plugin/camelcasemotion.vim
+445.086  000.873  000.873: sourcing /Users/jesushula/.vim/bundle/matchit.zip/plugin/matchit.vim
+445.550  000.307  000.307: sourcing /Users/jesushula/.vim/bundle/vim-multiple-cursors/plugin/multiple_cursors.vim
+446.311  000.642  000.642: sourcing /Users/jesushula/.vim/bundle/NrrwRgn/plugin/NrrwRgn.vim
+446.770  000.339  000.339: sourcing /Users/jesushula/.vim/bundle/vim-tmux-navigator/plugin/tmux_navigator.vim
+446.998  000.102  000.102: sourcing /Users/jesushula/.vim/bundle/file-line/plugin/file_line.vim
+447.175  000.063  000.063: sourcing /Users/jesushula/.vim/bundle/gundo.vim/plugin/gundo.vim
+452.366  005.088  005.088: sourcing /Users/jesushula/.vim/bundle/YankRing.vim/plugin/yankring.vim
+452.985  000.302  000.302: sourcing /Users/jesushula/.vim/bundle/tlib_vim/plugin/02tlib.vim
+454.856  001.666  001.666: sourcing /Users/jesushula/.vim/bundle/vim-abolish/plugin/abolish.vim
+456.307  001.234  001.234: sourcing /Users/jesushula/.vim/bundle/vim-endwise/plugin/endwise.vim
+457.682  001.111  001.111: sourcing /Users/jesushula/.vim/bundle/vim-ragtag/plugin/ragtag.vim
+458.890  001.047  001.047: sourcing /Users/jesushula/.vim/bundle/vim-surround/plugin/surround.vim
+464.210  005.195  005.195: sourcing /Users/jesushula/.vim/bundle/vim-unimpaired/plugin/unimpaired.vim
+464.459  000.102  000.102: sourcing /Users/jesushula/.vim/bundle/AnsiEsc.vim/plugin/AnsiEscPlugin.vim
+465.168  000.678  000.678: sourcing /Users/jesushula/.vim/bundle/AnsiEsc.vim/plugin/cecutil.vim
+514.495  049.212  049.212: sourcing /Users/jesushula/.vim/bundle/AutoTag/plugin/autotag.vim
+514.865  000.192  000.192: sourcing /Users/jesushula/.vim/bundle/lastpos.vim/plugin/lastpos.vim
+515.127  000.157  000.157: sourcing /Users/jesushula/.vim/bundle/sudo.vim/plugin/sudo.vim
+515.423  000.194  000.194: sourcing /Users/jesushula/.vim/bundle/ctrlr.vim/plugin/ctrlr.vim
+526.138  010.122  010.122: sourcing /Users/jesushula/.vim/bundle/editorconfig-vim/plugin/editorconfig.vim
+526.362  000.063  000.063: sourcing /Users/jesushula/.vim/bundle/vim-togglecursor/plugin/togglecursor.vim
+526.593  000.129  000.129: sourcing /Users/jesushula/.vim/bundle/vim-dispatch/plugin/dispatch.vim
+527.209  000.508  000.508: sourcing /Users/jesushula/.vim/bundle/Auto-Pairs/plugin/auto-pairs.vim
+527.715  000.074  000.074: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/getscriptPlugin.vim
+528.096  000.353  000.353: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/gzip.vim
+528.388  000.264  000.264: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/logiPat.vim
+528.441  000.025  000.025: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/manpager.vim
+528.750  000.282  000.282: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/matchparen.vim
+529.740  000.954  000.954: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/netrwPlugin.vim
+529.869  000.070  000.070: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/rrhelper.vim
+529.960  000.043  000.043: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/spellfile.vim
+530.202  000.206  000.206: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/tarPlugin.vim
+530.355  000.111  000.111: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/tohtml.vim
+530.601  000.210  000.210: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/vimballPlugin.vim
+530.875  000.228  000.228: sourcing /usr/local/Cellar/macvim/8.0-110/MacVim.app/Contents/Resources/vim/runtime/plugin/zipPlugin.vim
+530.956  013.208: loading plugins
+531.117  000.161: loading packages
+531.411  000.129  000.129: sourcing /Users/jesushula/.vim/after/plugin/vimrc_after.vim
+532.228  000.574  000.574: sourcing /Users/jesushula/.vim/bundle/vim-snipmate/after/plugin/snipMate.vim
+532.796  000.046  000.046: sourcing /Users/jesushula/.vim/bundle/csapprox/after/plugin/CSApprox.vim
+534.240  000.305  000.305: sourcing /Users/jesushula/.vim/bundle/tabular/autoload/tabular.vim
+536.149  002.821  002.516: sourcing /Users/jesushula/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+536.520  001.833: loading after plugins
+536.529  000.009: inits 3
+537.752  001.156  001.156: sourcing $VIMRUNTIME/menu.vim
+538.348  000.551  000.551: sourcing $VIM/gvimrc
+722.868  184.632: starting GUI
+727.065  004.197: reading viminfo
+770.986  043.921: GUI delay
+770.997  000.011: setting raw mode
+771.002  000.005: start termcap
+771.035  000.033: clearing screen
+771.682  000.647: opening buffers
+773.066  000.613  000.613: sourcing /Users/jesushula/.vim/bundle/vim-gitgutter/autoload/gitgutter.vim
+781.596  000.651  000.651: sourcing /Users/jesushula/.vim/bundle/vim-gitgutter/autoload/gitgutter/utility.vim
+782.786  000.352  000.352: sourcing /Users/jesushula/.vim/bundle/vim-gitgutter/autoload/gitgutter/hunk.vim
+940.641  000.506  000.506: sourcing /Users/jesushula/.vim/bundle/nerdtree/syntax/nerdtree.vim
+959.438  000.720  000.720: sourcing /Users/jesushula/.vim/bundle/lightline.vim/autoload/lightline.vim
+960.679  000.130  000.130: sourcing /Users/jesushula/.vim/bundle/lightline.vim/autoload/lightline/tab.vim
+962.314  000.371  000.371: sourcing /Users/jesushula/.vim/bundle/lightline.vim/autoload/lightline/colorscheme.vim
+965.699  004.227  003.856: sourcing /Users/jesushula/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/powerline.vim
+965.749  004.639  000.412: sourcing /Users/jesushula/.vim/bundle/lightline.vim/autoload/lightline/colorscheme/default.vim
+1000.452  222.159: BufEnter autocommands
+1000.459  000.007: editing files in windows
+1002.415  000.970  000.970: sourcing /Users/jesushula/.vim/bundle/vim-session/autoload/xolox/session.vim
+1012.223  010.794: VimEnter autocommands
+1012.227  000.004: before starting main loop
+1017.557  005.330: first screen update
+1017.563  000.006: --- VIM STARTED ---

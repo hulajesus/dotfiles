@@ -13,10 +13,10 @@
 " Now using the middle finger of either hand you can type
 " underscores with apple-k or apple-d, and add Shift
 " to type dashes
-imap <silent> <D-k> _
-imap <silent> <D-d> _
-imap <silent> <D-K> -
-imap <silent> <D-D> -
+" imap <silent> <D-k> _
+" imap <silent> <D-d> _
+" imap <silent> <D-K> -
+" imap <silent> <D-D> -
 
 " Change inside various enclosures with Cmd-" and Cmd-'
 " The f makes it find the enclosure so you don't have
@@ -40,8 +40,8 @@ autocmd FileType ruby map <buffer> <D-j> ]m
 autocmd FileType ruby map <buffer> <D-k> [m
 autocmd FileType rspec map <buffer> <D-j> }
 autocmd FileType rspec map <buffer> <D-k> {
-autocmd FileType javascript map <buffer> <D-k> }
-autocmd FileType javascript map <buffer> <D-j> {
+autocmd FileType javascript map <buffer> <D-j> }
+autocmd FileType javascript map <buffer> <D-k> {
 
 " Command-/ to toggle comments
 map <D-/> :TComment<CR>
@@ -70,6 +70,9 @@ nnoremap <D-Right>  <C-w>>
 " Hit Cmd-Shift-A then type a character you want to align by
 nmap <D-A> :Tabularize /
 vmap <D-A> :Tabularize /
+
+nmap <Space> :lnext<CR>
+nmap <S-Space> :lprevious<CR>
 
 " Source current file Cmd-% (good for vim development)
 map <D-%> :so %<CR>

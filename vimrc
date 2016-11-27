@@ -8,16 +8,28 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
-" ================ General Config ====================
+" autoreload vimrc
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+" 当光标到达顶部或底部继续走时，cursor freeze， 关闭vim bell解决
+set noeb vb t_vb=
+
+" 正向遍历同名标签
+nmap tn :tnext<CR>
+" 反向遍历同名标签
+nmap tp :tprevious<CR>
+
+" ================ General Config ====================
+set cursorline
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
+set history=100                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set autowrite
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -29,7 +41,7 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
@@ -114,4 +126,5 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
+set clipboard=unnamed "Alias unnamed register to the +register
 so ~/.yadr/vim/settings.vim
