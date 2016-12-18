@@ -5,6 +5,8 @@ vim/view
 *un~
 vim/.netrwhist
 vim/tmp
+vim/eclim
+vim/plugin/
 vim/spell
 vim/after/.vimrc.after
 vim/.vundles.local

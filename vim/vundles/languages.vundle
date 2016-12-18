@@ -2,7 +2,6 @@
 Bundle 'honza/vim-snippets'
 Bundle 'SirVer/ultisnips'
 Bundle 'jtratner/vim-flavored-markdown.git'
-" Bundle 'scrooloose/syntastic.git'
 Bundle 'w0rp/ale'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'pangloss/vim-javascript'

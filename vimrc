@@ -8,6 +8,9 @@ if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
 endif
 
+" speed up vim looking for ruby exec
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
 " autoreload vimrc
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 

@@ -71,7 +71,7 @@ nnoremap ,. '.
 "
 " the first quote will autoclose so you'll get 'foo' and hitting <c-a> will
 " put the cursor right after the quote
-imap <C-a> <esc>wa
+imap <C-w> <esc>wa
 
 " ==== NERD tree
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
@@ -93,6 +93,7 @@ nmap <silent> ,qo :copen<CR>
 "Move back and forth through previous and next buffers
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
+nmap <silent> <S-Tab> :bnext<CR>
 nnoremap <silent> ,x :bn<CR>
 
 " ==============================
@@ -135,7 +136,8 @@ nnoremap <silent> ,cr :let @* = expand("%")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 
 "Clear current search highlight by double tapping //
-nmap <silent> // :nohlsearch<CR>
+" nmap <silent> // :nohlsearch<CR>
+nmap <silent> <BS> :nohlsearch<CR>
 
 "(v)im (c)ommand - execute current line as a vim command
 nmap <silent> ,vc yy:<C-f>p<C-c><CR>
@@ -144,8 +146,50 @@ nmap <silent> ,vc yy:<C-f>p<C-c><CR>
 nmap <silent> ,vr :so %<CR>
 
 
+nnoremap <silent> yo :call YankOnce()<CR>o
+function! YankOnce()
+    let b:paste = &paste
+    set paste
+    autocmd InsertLeave *
+          \ if exists('b:paste') |
+          \   let &paste = b:paste |
+          \   unlet b:paste |
+          \ endif
+endfunction
+
+" Ctrl-a/e: Go to begin/end of line
+inoremap <C-a> <esc>I
+nnoremap <C-a> <esc>I
+inoremap <C-e> <esc>A
+nnoremap <C-e> <esc>A
+
+" Ctrl-[fb]: Move left/right by word
+cnoremap <C-b> <S-left>
+cnoremap <C-f> <S-right>
+inoremap <C-b> <S-left>
+inoremap <C-f> <S-right>
+nnoremap <C-b> <S-left>
+nnoremap <C-f> <S-right>
+
+" Ctrl-[kj]: Move lines up/down
+vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
+vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
+
+" Bash like keys for the command line
+cnoremap <C-a> <home>
+
 " Type ,hl to toggle highlighting on/off, and show current value.
 noremap ,hl :set hlsearch! hlsearch?<CR>
+
+" Resize windows with arrow keys
+" nnoremap <D-Up> <C-w>+
+" nnoremap <D-Down> <C-w>-
+" nnoremap <D-Left> <C-w><
+" nnoremap <D-Right>  <C-w>>
+nmap <silent> <D-Up> :exe "resize " . (winheight(0) * 3/2)<CR>
+nmap <silent> <D-Down> :exe "resize " . (winheight(0) * 2/3)<CR>
+nmap <silent> <D-Left> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
+nmap <silent> <D-Right> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked

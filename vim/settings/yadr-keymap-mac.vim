@@ -58,12 +58,6 @@ map <silent> <D-7> :tabn 7<cr>
 map <silent> <D-8> :tabn 8<cr>
 map <silent> <D-9> :tabn 9<cr>
 
-" Resize windows with arrow keys
-nnoremap <D-Up> <C-w>+
-nnoremap <D-Down> <C-w>-
-nnoremap <D-Left> <C-w><
-nnoremap <D-Right>  <C-w>>
-
 " ============================
 " Tabularize - alignment
 " ============================
@@ -71,8 +65,10 @@ nnoremap <D-Right>  <C-w>>
 nmap <D-A> :Tabularize /
 vmap <D-A> :Tabularize /
 
-nmap <Space> :lnext<CR>
-nmap <S-Space> :lprevious<CR>
+" nmap <Space> :lnext<CR>
+" nmap <S-Space> :lprevious<CR>
+nmap <silent> <S-Space> <Plug>(ale_previous_wrap)
+nmap <silent> <Space> <Plug>(ale_next_wrap)
 
 " Source current file Cmd-% (good for vim development)
 map <D-%> :so %<CR>

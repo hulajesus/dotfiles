@@ -1,0 +1,2 @@
+noremap ,c :CtrlPCmdPalette <CR>
+
