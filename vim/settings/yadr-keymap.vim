@@ -143,8 +143,12 @@ nmap <silent> <BS> :nohlsearch<CR>
 nmap <silent> ,vc yy:<C-f>p<C-c><CR>
 
 "(v)im (r)eload
-nmap <silent> ,vr :so %<CR>
+nmap <silent> ,vr :so $MYVIMRC<CR>
 
+"(e)dit (v)im/split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+:inoremap jk <esc>
 
 nnoremap <silent> yo :call YankOnce()<CR>o
 function! YankOnce()
@@ -159,9 +163,7 @@ endfunction
 
 " Ctrl-a/e: Go to begin/end of line
 inoremap <C-a> <esc>I
-nnoremap <C-a> <esc>I
 inoremap <C-e> <esc>A
-nnoremap <C-e> <esc>A
 
 " Ctrl-[fb]: Move left/right by word
 cnoremap <C-b> <S-left>
@@ -216,3 +218,13 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " :cp)
 " nnoremap <silent> <C-x> :cn<CR>
 " nnoremap <silent> <C-z> :cp<CR>
+"
+imap <C-x> <esc>ddi
+
+function PrettyJson()
+  let &l:filetype='json'
+  execute ":%!python -m json.tool"
+endfunction
+
+map <silent> <leader>json :call PrettyJson()<CR>
+

@@ -1,7 +1,0 @@
-Bundle "jistr/vim-nerdtree-tabs.git"
-Bundle "scrooloose/nerdtree.git"
-Bundle "ctrlpvim/ctrlp.vim"
-Bundle "jlanzarotta/bufexplorer"
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-easytags"
-Bundle "xolox/vim-session"

@@ -45,3 +45,11 @@ Session.vim
 # SASS
 # ----------------------------------------------------------------------------------------------
 .sass-cache
+
+# sql backup
+*.sql
+
+# direnv config file
+.envrc
+
+

@@ -23,7 +23,7 @@ nmap tn :tnext<CR>
 nmap tp :tprevious<CR>
 
 " ================ General Config ====================
-set cursorline
+" set cursorline
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=100                "Store lots of :cmdline history
@@ -41,6 +41,13 @@ set hidden
 
 "turn on syntax highlighting
 syntax on
+
+
+" 80 column layout concerns
+set colorcolumn=80
+set linespace=2
+" set synmaxcol=80
+
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
@@ -95,7 +102,7 @@ set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
+" set foldmethod=indent   "fold based on indent
 set foldnestmax=3       "deepest fold is 3 levels
 set nofoldenable        "dont fold by default
 
@@ -120,6 +127,7 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
+set ttyfast
 
 " ================ Search ===========================
 

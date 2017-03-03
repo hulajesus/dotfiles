@@ -13,12 +13,13 @@ if has("gui_running")
   set columns=190
 
   if has("gui_gtk2")
-    set guifont=Monaco\ 12
+    set guifont=Monaco\ 13
   else
-    set guifont=Monaco:h12
+    set guifont=Monaco:h13
   end
 else
   let g:CSApprox_loaded = 1
 endif
 
-colorscheme molokai
+colorscheme hybrid
+

@@ -1,6 +1,0 @@
-Bundle "justinmk/vim-sneak"
-Bundle "rking/ag.vim"
-Bundle "dyng/ctrlsf.vim"
-Bundle "vim-scripts/IndexedSearch"
-Bundle "skwp/greplace.vim"
-Bundle "Lokaltog/vim-easymotion"

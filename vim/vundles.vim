@@ -1,39 +1,98 @@
-" ========================================
-" Vim plugin configuration
-" ========================================
-"
-" This file contains the list of plugin installed using vundle plugin manager.
-" Once you've updated the list of plugin, you can run vundle update by issuing
-" the command :BundleInstall from within vim or directly invoking it from the
-" command line with the following syntax:
-" vim --noplugin -u vim/vundles.vim -N "+set hidden" "+syntax on" +BundleClean! +BundleInstall +qall
-" Filetype off is required by vundle
-filetype off
+call plug#begin('~/.vim/bundle')
 
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/vundles/ "Submodules
-call vundle#rc()
+" appearance
+Plug 'itchyny/lightline.vim'
+Plug 'xsunsmile/showmarks'
+Plug 'w0ng/vim-hybrid'
 
-" let Vundle manage Vundle (required)
-Bundle "gmarik/vundle"
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" YADR's vundles are split up by category into smaller files
-" This reduces churn and makes it easier to fork. See
-" ~/.vim/vundles/ to edit them:
-runtime ruby.vundle
-runtime languages.vundle
-runtime git.vundle
-runtime appearance.vundle
-runtime textobjects.vundle
-runtime search.vundle
-runtime project.vundle
-runtime vim-improvements.vundle
+" language
+Plug 'sheerun/vim-polyglot'
+Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
+" Plug 'jtratner/vim-flavored-markdown'
+" Plug 'pangloss/vim-javascript'
+" Plug 'isRuslan/vim-es6'
+" Plug 'JulesWang/css.vim'
+" Plug 'fatih/vim-go'
+" Plug 'keith/tmux.vim'
+" Plug 'othree/html5.vim'
+" Plug 'ethereum/vim-solidity'
+" Plug 'othree/nginx-contrib-vim'
+" Plug 'mxw/vim-jsx'
+" Plug 'lukaszb/vim-web-indent'
 
-" The plugins listed in ~/.vim/.vundles.local will be added here to
-" allow the user to add vim plugins to yadr without the need for a fork.
-if filereadable(expand("~/.yadr/vim/.vundles.local"))
-  source ~/.yadr/vim/.vundles.local
-endif
+" project
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-session'
+Plug 'janko-m/vim-test'
+" Plug 'majutsushi/tagbar'
 
-"Filetype plugin indent on is required by vundle
-filetype plugin indent on
+" ruby
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ck3g/vim-change-hash-syntax'
+Plug 'tpope/vim-bundler'
+
+" search
+Plug 'dyng/ctrlsf.vim'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'skwp/greplace.vim'
+Plug 'Lokaltog/vim-easymotion'
+
+" textobjects
+Plug 'kana/vim-textobj-user'
+Plug 'austintaylor/vim-indentobject'
+Plug 'bootleq/vim-textobj-rubysymbol'
+Plug 'coderifous/textobj-word-column.vim'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-function'
+Plug 'thinca/vim-textobj-function-javascript'
+Plug 'lucapette/vim-textobj-underscore'
+Plug 'wellle/targets.vim'
+Plug 'terryma/vim-expand-region'
+
+" improvement
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'briandoll/change-inside-surroundings.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-abolish'
+Plug 'vim-scripts/camelcasemotion'
+Plug 'vim-scripts/matchit.zip'
+Plug 'kristijanhusak/vim-multiple-cursors'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'bogado/file-line'
+Plug 'sjl/gundo.vim'
+Plug 'skwp/YankRing.vim'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'powerman/vim-plugin-AnsiEsc'
+" Plug 'vim-scripts/lastpos.vim'
+" Plug 'vim-scripts/sudo.vim'
+Plug 'goldfeld/ctrlr.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'vim-scripts/Auto-Pairs'
+Plug 'drn/zoomwin-vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ianva/vim-youdao-translater'
+" Plug 'jszakmeister/vim-togglecursor'
+
+call plug#end()
