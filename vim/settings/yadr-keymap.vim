@@ -18,12 +18,17 @@ function! YRRunAfterMaps()
   nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
 endfunction
 
+nnoremap zf zMzo
+
 " Make 0 go to the first character rather than the beginning
 " of the line. When we're programming, we're almost always
 " interested in working with text rather than empty space. If
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
 nnoremap ^ 0
+
+" forward tag list
+nnoremap <C-g> :tag<CR>
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
@@ -147,8 +152,21 @@ nmap <silent> ,vr :so $MYVIMRC<CR>
 
 "(e)dit (v)im/split
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"(e)dit (z)sh/split
+nnoremap <leader>ez :vsplit ~/.zshrc<CR>
 
 :inoremap jk <esc>
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" move to beginning/end of line
+" nnoremap B 0
+nnoremap E $
+
+" highlight last inserted text
+nnoremap gV `[v`]
 
 nnoremap <silent> yo :call YankOnce()<CR>o
 function! YankOnce()
