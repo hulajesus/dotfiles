@@ -51,5 +51,6 @@ Session.vim
 
 # direnv config file
 .envrc
+.env
 
-
+vendor

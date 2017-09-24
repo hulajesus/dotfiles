@@ -1,6 +1,12 @@
 "  Use Vim settings, rather then Vi settings (much better!).
 "  This must be first, because it changes other options as a side effect.
  set nocompatible
+ set encoding=utf8
+ set macmeta
+
+ " Disable hover tooltips
+ set noballooneval
+ let g:netrw_nobeval = 1
 
  " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
  " source ~/.vimrc.before if it exists.
@@ -14,6 +20,11 @@
  " autoreload vimrc
  autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
+ " go last position when reopen file
+"  autocmd BufReadPost *
+"     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"
  " 当光标到达顶部或底部继续走时，cursor freeze， 关闭vim bell解决
  set noeb vb t_vb=
 
@@ -23,9 +34,11 @@
  nmap tp :tprevious<CR>
 
  " ================ General Config ====================
- set showmatch                   " highlight matching [{()}]
+set updatetime=300
+"  set showmatch                   " highlight matching [{()}]
 "  set cursorline                  " highlight current line
  set number                      "Line numbers are good
+"  set relativenumber
  set backspace=indent,eol,start  "Allow backspace in insert mode
  set history=100                "Store lots of :cmdline history
  set showcmd                     "Show incomplete cmds down the bottom
@@ -34,6 +47,7 @@
  set visualbell                  "No sounds
  set autoread                    "Reload files changed outside vim
  set autowrite
+ set regexpengine=1              "Old regex engine
 
  " This makes vim act like all other editors, buffers can
  " exist in the background without being in a window.
@@ -42,12 +56,15 @@
 
  "turn on syntax highlighting
  syntax on
+ "avlid syntax if file size > 10M
+"  autocmd BufReadPre * if getfsize(expand("%")) > 800000 | syntax off | endif
+"  autocmd BufReadPre * if getfsize(expand("%")) < 800000 | syntax on | endif
 
 
  " 80 column layout concerns
- set colorcolumn=80
- set linespace=2
- " set synmaxcol=80
+"  set colorcolumn=80
+ set linespace=10
+ set synmaxcol=300
 
 
  " Change leader to a comma because the backslash is too far away
@@ -108,8 +125,8 @@ set foldnestmax=8       "deepest fold is 8 levels
 set nofoldenable        "dont fold by default
 set foldlevelstart=8    " open most folds by default
 nnoremap <Leader><space> za    "space open/closes folds
-nnoremap zz zMzR
-au BufWinLeave * silent mkview  " 保存文件的折叠状态
+" nnoremap zz zMzR
+" au BufWinLeave * silent mkview  " 保存文件的折叠状态
 
 " au BufRead * silent loadview    " 恢复文件的折叠状态
 

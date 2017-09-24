@@ -150,7 +150,7 @@ alias cod='script/console --debugger'
 
 #If you want your thin to listen on a port for local VM development
 #export VM_IP=10.0.0.1 <-- your vm ip
-alias ts='thin start -a ${VM_IP:-127.0.0.1}'
+# alias ts='thin start -a ${VM_IP:-127.0.0.1}'
 alias ms='mongrel_rails start'
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'

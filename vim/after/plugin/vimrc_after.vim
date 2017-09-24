@@ -57,4 +57,5 @@ vnoremap <silent> * :<C-u>call <SID>VStarsearch_searchVWord()<CR>:set hls<CR>
 
 let &cpo = s:savedCpo
 
+set shell=/bin/bash
 

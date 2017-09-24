@@ -13,9 +13,9 @@ if has("gui_running")
   set columns=190
 
   if has("gui_gtk2")
-    set guifont=Monaco\ 13
+    set guifont=Menlo\ for\ Powerline\ 15
   else
-    set guifont=Monaco:h13
+    set guifont=Menlo\ for\ Powerline:h15
   end
 else
   let g:CSApprox_loaded = 1
@@ -23,3 +23,4 @@ endif
 
 colorscheme hybrid
 
+set transparency=1

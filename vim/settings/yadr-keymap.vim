@@ -25,7 +25,9 @@ nnoremap zf zMzo
 " interested in working with text rather than empty space. If
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
+vnoremap 0 ^
 nnoremap ^ 0
+vnoremap ^ 0
 
 " forward tag list
 nnoremap <C-g> :tag<CR>
@@ -62,9 +64,6 @@ vmap ,} c{ <C-R>" }<ESC>
 vmap ,{ c{<C-R>"}<ESC>
 
 map ,` ysiw`
-
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
 
 "Go to last edit location with ,.
 nnoremap ,. '.
@@ -157,7 +156,7 @@ nnoremap <leader>ez :vsplit ~/.zshrc<CR>
 
 :inoremap jk <esc>
 
-" move vertically by visual line
+" move vertically by visual line even relativenumber on
 nnoremap j gj
 nnoremap k gk
 
@@ -167,6 +166,9 @@ nnoremap E $
 
 " highlight last inserted text
 nnoremap gV `[v`]
+
+nnoremap cc :%s/\<<C-r><C-w>\>/
+vnoremap cc y:%s/\<<C-r><C-w>\>/
 
 nnoremap <silent> yo :call YankOnce()<CR>o
 function! YankOnce()
@@ -191,9 +193,9 @@ inoremap <C-f> <S-right>
 nnoremap <C-b> <S-left>
 nnoremap <C-f> <S-right>
 
-" Ctrl-[kj]: Move lines up/down
-vnoremap <silent> <C-j> :m '>+1<CR>gv=gv
-vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
+" " Ctrl-[kj]: Move lines up/down
+" nnoremap <silent> <C-j> :m '>+1<CR>gv=gv
+" vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
 
 " Bash like keys for the command line
 cnoremap <C-a> <home>
@@ -202,14 +204,10 @@ cnoremap <C-a> <home>
 noremap ,hl :set hlsearch! hlsearch?<CR>
 
 " Resize windows with arrow keys
-" nnoremap <D-Up> <C-w>+
-" nnoremap <D-Down> <C-w>-
-" nnoremap <D-Left> <C-w><
-" nnoremap <D-Right>  <C-w>>
-nmap <silent> <D-Up> :exe "resize " . (winheight(0) * 3/2)<CR>
-nmap <silent> <D-Down> :exe "resize " . (winheight(0) * 2/3)<CR>
-nmap <silent> <D-Left> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-nmap <silent> <D-Right> :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
+nnoremap <silent> <C-M-H> <C-W><
+nnoremap <silent> <C-M-j> <C-W>+
+nnoremap <silent> <C-M-k> <C-W>-
+nnoremap <silent> <C-M-l> <C-W>>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked
@@ -237,7 +235,7 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 " nnoremap <silent> <C-x> :cn<CR>
 " nnoremap <silent> <C-z> :cp<CR>
 "
-imap <C-x> <esc>ddi
+" imap <C-x> <esc>ddi
 
 function PrettyJson()
   let &l:filetype='json'
@@ -246,3 +244,12 @@ endfunction
 
 map <silent> <leader>json :call PrettyJson()<CR>
 
+nnoremap <F4> :exec exists('syntax_on') ? 'syn off': 'syn on'<CR>
+
+nmap /  <Plug>(incsearch-forward)
+nmap ?  <Plug>(incsearch-backward)
+
+nmap <C-space> :tn<CR>
+
+" redraw
+nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>

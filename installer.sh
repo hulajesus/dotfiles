@@ -61,6 +61,7 @@ echo "Please add the following settings for dein to the top of your vimrc (Vim) 
     echo "  \" Add or remove your plugins here:"
     echo "  call dein#add('Shougo/neosnippet.vim')"
     echo "  call dein#add('Shougo/neosnippet-snippets')"
+
     echo ""
     echo "  \" You can specify revision/branch/tag."
     echo "  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })"
@@ -87,3 +88,4 @@ echo "Please add the following settings for dein to the top of your vimrc (Vim) 
 echo "Done."
 
 echo "Complete setup dein!"
+
