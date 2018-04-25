@@ -8,6 +8,8 @@ let s:is_dark=(&background == 'dark')
 let s:mono0   = '#686868'
 let s:c_mono0 = 235
 
+" #1D1F21 for hybrid
+" #263238 for material
 let s:mono1   = '#1D1F21'
 let s:mono2   = '#1D1F21'
 let s:mono3   = '#1D1F21'
@@ -77,7 +79,3 @@ let s:p.tabline.tabsel = [
       \ [s:mono0, s:mono0, s:c_mono5, s:c_mono0]]
 
 let g:lightline#colorscheme#transparency#palette = s:p
-
-"let g:lightline.colorscheme = 'transparency'
-"call lightline#init()
-"call lightline#update()

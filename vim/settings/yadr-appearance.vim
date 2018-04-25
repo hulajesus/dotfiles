@@ -12,10 +12,13 @@ if has("gui_running")
   set lines=60
   set columns=190
 
+  " it make scroll slow
+  " set macligatures
   if has("gui_gtk2")
-    set guifont=Menlo\ for\ Powerline\ 15
+    set guifont=Monaco\ for\ Powerline\ 15
   else
-    set guifont=Menlo\ for\ Powerline:h15
+    " set guifont=Fira\ Code\ Light:h15
+    set guifont=Source\ Code\ Pro\ Light\ for\ Powerline:h15
   end
 else
   let g:CSApprox_loaded = 1

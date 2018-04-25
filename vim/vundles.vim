@@ -4,7 +4,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'itchyny/lightline.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'w0ng/vim-hybrid'
-Plug 'kristijanhusak/vim-hybrid-material'
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -26,7 +25,6 @@ augroup load_us_ycm
                      \| autocmd! load_us_ycm
 augroup END
 
-Plug 'jtratner/vim-flavored-markdown'
 Plug 'isRuslan/vim-es6'
 Plug 'JulesWang/css.vim'
 Plug 'fatih/vim-go'
@@ -51,7 +49,7 @@ Plug 'ton/vim-bufsurf'
 Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 " Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
+" Plug 'ck3g/vim-change-hash-syntax', { 'for': 'ruby' }
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 
 " search
@@ -70,7 +68,6 @@ Plug 'kana/vim-textobj-line'
 Plug 'christoomey/vim-sort-motion'
 Plug 'lucapette/vim-textobj-underscore', { 'for': 'ruby' }
 Plug 'wellle/targets.vim'
-Plug 'terryma/vim-expand-region'
 
 " improvement
 Plug 'AndrewRadev/splitjoin.vim' " Plug 'Raimondi/delimitMate'

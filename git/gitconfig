@@ -128,12 +128,14 @@
   path = .gitconfig.user
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
 	name = hulajesus
 	email = hulajesus@gmail.com
+	signingkey = 7FB358ED367BE22C
 [commit]
 	template = /Users/jesushula/.stCommitMsg
+  gpgsign = true
