@@ -24,6 +24,6 @@ else
   let g:CSApprox_loaded = 1
 endif
 
-colorscheme hybrid
+" colorscheme hybrid
 
 set transparency=1

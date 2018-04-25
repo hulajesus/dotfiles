@@ -3,26 +3,24 @@ call plug#begin('~/.vim/bundle')
 " appearance
 Plug 'itchyny/lightline.vim'
 Plug 'kshenoy/vim-signature'
-Plug 'w0ng/vim-hybrid'
+" Plug 'w0ng/vim-hybrid'
 
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " language
 " Plug 'sheerun/vim-polyglot'
 Plug 'honza/vim-snippets'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'erb', 'haml'] }
 
 Plug 'SirVer/ultisnips', { 'on': [] }
-Plug 'Valloric/YouCompleteMe', { 'on': [] }
+" Plug 'Valloric/YouCompleteMe', { 'on': [] }
 augroup load_us_ycm
   autocmd!
-  autocmd InsertEnter * call plug#load('ultisnips', 'YouCompleteMe')
-                     \| call youcompleteme#Enable()
-                     \| autocmd! load_us_ycm
+  autocmd InsertEnter * call plug#load('ultisnips')
 augroup END
 
 Plug 'isRuslan/vim-es6'
@@ -36,11 +34,12 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 
 " project
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tacahiroy/ctrlp-funky'
 " Plug 'xolox/vim-misc'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'xolox/vim-easytags'
 Plug 'janko-m/vim-test'
 Plug 'ton/vim-bufsurf'
 " Plug 'majutsushi/tagbar'

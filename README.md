@@ -39,6 +39,7 @@ To get started please run:
 
 ```bash
 sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
+sudo apt install vim-nox-py2 #python support
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked

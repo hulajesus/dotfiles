@@ -2,10 +2,10 @@
 "  This must be first, because it changes other options as a side effect.
  set nocompatible
  set encoding=utf8
- set macmeta
+"  set macmeta
 
  " Disable hover tooltips
- set noballooneval
+"  set noballooneval
  let g:netrw_nobeval = 1
 
  " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
@@ -96,7 +96,6 @@ set updatetime=300
  endif
 
  " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
