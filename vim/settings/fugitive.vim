@@ -4,4 +4,4 @@
 nnoremap <silent> ,dg :diffget<CR>
 nnoremap <silent> ,dp :diffput<CR>
 
-set signcolumn=yes
+" set signcolumn=yes

@@ -26,4 +26,4 @@ endif
 
 " colorscheme hybrid
 
-set transparency=1
+" set transparency=1
