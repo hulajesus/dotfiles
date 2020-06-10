@@ -1,0 +1,7 @@
+---
+BUNDLE_GEM__COC: "false"
+BUNDLE_GEM__MIT: "false"
+BUNDLE_GEM__TEST: "false"
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+BUNDLE_GIT__ALLOW_INSECURE: "true"
+BUNDLE_JOBS: "7"

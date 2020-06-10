@@ -1,5 +1,4 @@
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
@@ -9,8 +8,6 @@ let g:lightline = {
       \   'readonly': 'MyReadonly',
       \   'filename': 'MyFilename',
       \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
 
 function! MyReadonly()
@@ -38,3 +35,6 @@ endfunction
 
 " Use status bar even with single buffer
 set laststatus=2
+
+let g:lightline = {}
+let g:lightline.colorscheme = 'transparency'

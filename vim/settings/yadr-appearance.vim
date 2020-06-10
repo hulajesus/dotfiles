@@ -12,20 +12,20 @@ if has("gui_running")
   set lines=60
   set columns=190
 
+  " it make scroll slow
+  " set macligatures
   if has("gui_gtk2")
-    set guifont=Inconsolata\ XL\ 12,Inconsolata\ 15,Monaco\ 12
+    set guifont=Monaco\ for\ Powerline\ 15
   else
-    set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
+    " set guifont=Fira\ Code\ Light:h15
+    " set guifont=Hasklig:h15
+    set guifont=Monaco\ for\ Powerline:h14
+    " set guifont=Source\ Code\ Pro\ Light\ for\ Powerline:h14
   end
 else
   let g:CSApprox_loaded = 1
-
-  " For people using a terminal that is not Solarized
-  if exists("g:yadr_using_unsolarized_terminal")
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-  end
 endif
 
-colorscheme solarized
-set background=dark
+colorscheme hybrid
+
+set transparency=1

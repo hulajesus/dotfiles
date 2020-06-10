@@ -1,4 +1,3 @@
-require 'rake'
 require 'fileutils'
 require File.join(File.dirname(__FILE__), 'bin', 'yadr', 'vundle')
 
@@ -100,11 +99,11 @@ task :install_vundle do
 
   puts ""
 
-  vundle_path = File.join('vim','bundle', 'vundle')
+  vundle_path = File.join('vim','autoload', 'plugin.vim')
   unless File.exists?(vundle_path)
     run %{
       cd $HOME/.yadr
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
+      curl -fLo #{vundle_path} --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     }
   end
 

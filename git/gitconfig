@@ -94,12 +94,13 @@
 [mergetool]
   prompt = false
 [mergetool "mvimdiff"]
-  cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
+	cmd = mvim -c 'Gvdiff' $MERGED
   keepbackup=false
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+	tool = mvimdiff
+	ff = no
 [apply]
   whitespace = nowarn
 [branch]
@@ -109,9 +110,9 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-  autocrlf = false
+	autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/hulajesus/.gitignore
 [advice]
   statusHints = false
 [diff]
@@ -125,3 +126,23 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = hulajesus
+	email = hulajesus@gmail.com
+	signingkey = 7FB358ED367BE22C
+#[commit]
+#	template = /Users/hulajesus/.stCommitMsg
+#  gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff "sopsdiffer"]
+	textconv = sops -d

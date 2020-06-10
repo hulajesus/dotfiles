@@ -1,121 +1,174 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+"  Use Vim settings, rather then Vi settings (much better!).
+"  This must be first, because it changes other options as a side effect.
+ set nocompatible
+ set encoding=utf8
+ set macmeta
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
+ " Disable hover tooltips
+ set noballooneval
+ let g:netrw_nobeval = 1
 
-" ================ General Config ====================
+ " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
+ " source ~/.vimrc.before if it exists.
+ if filereadable(expand("~/.vimrc.before"))
+   source ~/.vimrc.before
+ endif
 
-set number                      "Line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
+ " speed up vim looking for ruby exec
+ let g:ruby_path = system('echo $HOME/.rbenv/shims')
 
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
+ " autoreload vimrc
+ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
-"turn on syntax highlighting
-syntax on
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-let mapleader=","
+ " go last position when reopen file
+"  autocmd BufReadPost *
+"     \ if line("'\"") > 1 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"
+ " 当光标到达顶部或底部继续走时，cursor freeze， 关闭vim bell解决
+ set noeb vb t_vb=
+ " 正向遍历同名标签
+ nmap tn :tnext<CR>
+ " 反向遍历同名标签
+ nmap tp :tprevious<CR>
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
-endif
-au BufNewFile,BufRead *.vundle set filetype=vim
+ " ================ General Config ====================
+set updatetime=300
+"  set showmatch                   " highlight matching [{()}]
+"  set cursorline                  " highlight current line
+ set number                      "Line numbers are good
+"  set relativenumber
+ set backspace=indent,eol,start  "Allow backspace in insert mode
+ set history=100                "Store lots of :cmdline history
+ set showcmd                     "Show incomplete cmds down the bottom
+ set showmode                    "Show current mode down the bottom
+ set gcr=a:blinkon0              "Disable cursor blink
+ set visualbell                  "No sounds
+ set autoread                    "Reload files changed outside vim
+ set autowrite
+ set regexpengine=1              "Old regex engine
 
-" ================ Turn Off Swap Files ==============
+ " This makes vim act like all other editors, buffers can
+ " exist in the background without being in a window.
+ " http://items.sjbach.com/319/configuring-vim-right
+ set hidden
 
-set noswapfile
-set nobackup
-set nowb
+ "turn on syntax highlighting
+ syntax on
+ "avlid syntax if file size > 10M
+" autocmd BufReadPre * if getfsize(expand("%")) > 800000 | syntax off | endif
+" autocmd BufReadPre * if getfsize(expand("%")) < 800000 | syntax on | endif
 
-" ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-if has('persistent_undo') && isdirectory(expand('~').'/.vim/backups')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
-  set undofile
-endif
 
-" ================ Indentation ======================
+ " 80 column layout concerns
+"  set colorcolumn=80
+ set linespace=5
+ set synmaxcol=200
+
+
+ " Change leader to a comma because the backslash is too far away
+ " That means all \x commands turn into ,x
+ " The mapleader has to be set before vundle starts loading all
+ " the plugins.
+ let mapleader=","
+
+ " =============== Vundle Initialization ===============
+ " This loads all the plugins specified in ~/.vim/vundles.vim
+ " Use Vundle plugin to manage all other plugins
+ if filereadable(expand("~/.vim/vundles.vim"))
+   source ~/.vim/vundles.vim
+ endif
+
+ " ================ Turn Off Swap Files ==============
+
+ set noswapfile
+ set nobackup
+ set nowb
+
+ " ================ Persistent Undo ==================
+ " Keep undo history across sessions, by storing in file.
+ " Only works all the time.
+ if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
+   silent !mkdir ~/.vim/backups > /dev/null 2>&1
+   set undodir=~/.vim/backups
+   set undofile
+ endif
+
+ " ================ Indentation ======================
 
 set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
+set softtabstop=2  " number of spaces in tab when editing
+set tabstop=2    " number of visual spaces per TAB
+set expandtab   " tabs are spaces
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+ " Auto indent pasted text
+ nnoremap p p=`]<C-o>
+ nnoremap P P=`]<C-o>
 
-filetype plugin on
-filetype indent on
+ filetype plugin on
+ filetype indent on
 
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+ " Display tabs and trailing spaces visually
+ set list listchars=tab:\ \ ,trail:·
 
-set nowrap       "Don't wrap lines
-set linebreak    "Wrap lines at convenient points
+ set nowrap       "Don't wrap lines
+ set linebreak    "Wrap lines at convenient points
 
-" ================ Folds ============================
+ " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+set foldmethod=indent  "fold based on indent
+set foldnestmax=8       "deepest fold is 8 levels
 set nofoldenable        "dont fold by default
+set foldlevelstart=8    " open most folds by default
+nnoremap <Leader><space> za    "space open/closes folds
+" nnoremap zz zMzR
+" au BufWinLeave * silent mkview  " 保存文件的折叠状态
 
-" ================ Completion =======================
+" au BufRead * silent loadview    " 恢复文件的折叠状态
 
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
-set wildignore+=*sass-cache*
-set wildignore+=*DS_Store*
-set wildignore+=vendor/rails/**
-set wildignore+=vendor/cache/**
-set wildignore+=*.gem
-set wildignore+=log/**
-set wildignore+=tmp/**
-set wildignore+=*.png,*.jpg,*.gif
+ " ================ Completion =======================
 
-" ================ Scrolling ========================
+ set wildmode=list:longest
+ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+ set wildignore+=*vim/backups*
+ set wildignore+=*sass-cache*
+ set wildignore+=*DS_Store*
+ set wildignore+=vendor/rails/**
+ set wildignore+=vendor/cache/**
+ set wildignore+=*.gem
+ set wildignore+=log/**
+ set wildignore+=tmp/**
+ set wildignore+=*.png,*.jpg,*.gif
 
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-set sidescrolloff=15
-set sidescroll=1
+ "
+ " ================ Scrolling ========================
 
-" ================ Search ===========================
+ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+ set sidescrolloff=15
+ set sidescroll=1
+ set ttyfast
+ set lazyredraw
 
-set incsearch       " Find the next match as we type the search
-set hlsearch        " Highlight searches by default
-set ignorecase      " Ignore case when searching...
-set smartcase       " ...unless we type a capital
+ " ================ Search ===========================
 
-" ================ Security ==========================
-set modelines=0
-set nomodeline
+ set incsearch       " Find the next match as we type the search
+ set hlsearch        " Highlight searches by default
+ set ignorecase      " Ignore case when searching...
+ set smartcase       " ...unless we type a capital
 
-" ================ Custom Settings ========================
-so ~/.yadr/vim/settings.vim
+ " ================ Custom Settings ========================
+ set clipboard=unnamed "Alias unnamed register to the +register
+ so ~/.yadr/vim/settings.vim
+
+ set nofixendofline
+ " change local workdir
+ " autocmd BufEnter * silent! lcd %:p:h
+ " set autochdir
+ " asyncrun 
+ let g:asyncrun_open = 8
+ nnoremap <leader>ee :AsyncRun %:p<CR>

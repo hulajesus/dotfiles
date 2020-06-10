@@ -2,7 +2,7 @@
 " General vim sanity improvements
 " ========================================
 "
-"
+"C-U
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
@@ -17,13 +17,19 @@ nnoremap Y y$
 function! YRRunAfterMaps()
   nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
 endfunction
+nnoremap zf zMzo
 
 " Make 0 go to the first character rather than the beginning
 " of the line. When we're programming, we're almost always
 " interested in working with text rather than empty space. If
 " you want the traditional beginning of line, use ^
 nnoremap 0 ^
+vnoremap 0 ^
 nnoremap ^ 0
+vnoremap ^ 0
+
+" forward tag list
+nnoremap <C-g> :tag<CR>
 
 " ,# Surround a word with #{ruby interpolation}
 map ,# ysiw#
@@ -58,9 +64,6 @@ vmap ,{ c{<C-R>"}<ESC>
 
 map ,` ysiw`
 
-" gary bernhardt's hashrocket
-imap <c-l> <space>=><space>
-
 "Go to last edit location with ,.
 nnoremap ,. '.
 
@@ -71,7 +74,7 @@ nnoremap ,. '.
 "
 " the first quote will autoclose so you'll get 'foo' and hitting <c-a> will
 " put the cursor right after the quote
-imap <C-a> <esc>wa
+imap <C-w> <esc>wa
 
 " ==== NERD tree
 " Open the project tree and expose current file in the nerdtree with Ctrl-\
@@ -93,6 +96,7 @@ nmap <silent> ,qo :copen<CR>
 "Move back and forth through previous and next buffers
 "with ,z and ,x
 nnoremap <silent> ,z :bp<CR>
+nmap <silent> <S-Tab> :bnext<CR>
 nnoremap <silent> ,x :bn<CR>
 
 " ==============================
@@ -131,20 +135,79 @@ imap <silent> <C-J> <%  %><Esc>2hi
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+nnoremap <silent> ,pwd :let @* = expand("%:p:h")<CR>
 nnoremap <silent> ,cr :let @* = expand("%")<CR>
 nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
 
 "Clear current search highlight by double tapping //
-nmap <silent> // :nohlsearch<CR>
+" nmap <silent> // :nohlsearch<CR>
+nmap <silent> <BS> :nohlsearch<CR>
 
 "(v)im (c)ommand - execute current line as a vim command
 nmap <silent> ,vc yy:<C-f>p<C-c><CR>
 
 "(v)im (r)eload
-nmap <silent> ,vr :so %<CR>
+nmap <silent> ,vr :so $MYVIMRC<CR>
+
+"(e)dit (v)im/split
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+"(e)dit (z)sh/split
+nnoremap <leader>ez :vsplit ~/.zshrc<CR>
+
+:inoremap jk <esc>
+
+" move vertically by visual line even relativenumber on
+nnoremap j gj
+nnoremap k gk
+
+" move to beginning/end of line
+" nnoremap B 0
+nnoremap E $
+
+" highlight last inserted text
+nnoremap gV `[v`]
+
+nnoremap cc :%s/\<<C-r><C-w>\>/
+vnoremap cc y:%s/\<<C-r><C-w>\>/
+
+nnoremap <silent> yo :call YankOnce()<CR>o
+function! YankOnce()
+    let b:paste = &paste
+    set paste
+    autocmd InsertLeave *
+          \ if exists('b:paste') |
+          \   let &paste = b:paste |
+          \   unlet b:paste |
+          \ endif
+endfunction
+
+" Ctrl-a/e: Go to begin/end of line
+inoremap <C-a> <esc>I
+inoremap <C-e> <esc>A
+
+" Ctrl-[fb]: Move left/right by word
+cnoremap <C-b> <S-left>
+cnoremap <C-f> <S-right>
+inoremap <C-b> <S-left>
+inoremap <C-f> <S-right>
+nnoremap <C-b> <S-left>
+nnoremap <C-f> <S-right>
+
+" " Ctrl-[kj]: Move lines up/down
+" nnoremap <silent> <C-j> :m '>+1<CR>gv=gv
+" vnoremap <silent> <C-k> :m '<-2<CR>gv=gv
+
+" Bash like keys for the command line
+cnoremap <C-a> <home>
 
 " Type ,hl to toggle highlighting on/off, and show current value.
 noremap ,hl :set hlsearch! hlsearch?<CR>
+
+" Resize windows with arrow keys
+nnoremap <silent> <C-M-H> <C-W><
+nnoremap <silent> <C-M-j> <C-W>+
+nnoremap <silent> <C-M-k> <C-W>-
+nnoremap <silent> <C-M-l> <C-W>>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked
@@ -153,6 +216,7 @@ noremap ,hl :set hlsearch! hlsearch?<CR>
 " swap them: http://items.sjbach.com/319/configuring-vim-right
 nnoremap ' `
 nnoremap ` '
+nmap mm :delmarks!<cr>
 
 " ============================
 " SplitJoin plugin
@@ -168,5 +232,24 @@ map <silent> ,hp :!open -a Safari %<CR><CR>
 
 " Map Ctrl-x and Ctrl-z to navigate the quickfix error list (normally :cn and
 " :cp)
-nnoremap <silent> <C-x> :cn<CR>
-nnoremap <silent> <C-z> :cp<CR>
+" nnoremap <silent> <C-x> :cn<CR>
+" nnoremap <silent> <C-z> :cp<CR>
+"
+" imap <C-x> <esc>ddi
+
+function PrettyJson()
+  let &l:filetype='json'
+  execute ":%!python -m json.tool"
+endfunction
+
+map <silent> <leader>json :call PrettyJson()<CR>
+
+nnoremap <F4> :exec exists('syntax_on') ? 'syn off': 'syn on'<CR>
+
+nmap /  <Plug>(incsearch-forward)
+nmap ?  <Plug>(incsearch-backward)
+
+nmap <C-space> :tn<CR>
+
+" redraw
+nnoremap <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>

@@ -177,8 +177,8 @@ of plugins above to learn more.
 
 #### Navigation
 
- * `,z` - go to previous buffer (:bp)
- * `,x` - go to next buffer (:bn)
+ * `H` - go to previous buffer (:BufSurfBack)
+ * `L` - go to next buffer (:BufSurfForward)
  * `Cmd-j` and `Cmd-k` to move up and down roughly by functions (`Alt` in Linux)
  * `Ctrl-o` - Old cursor position - this is a standard mapping but very useful, so included here
  * `Ctrl-i` - opposite of Ctrl-O (again, this is standard)
@@ -187,13 +187,13 @@ of plugins above to learn more.
 
  * `,f` - instantly Find definition of class (must have exuberant ctags installed)
  * `,F` - same as `,f` but in a vertical split
- * `,gf` or `Ctrl-f` - same as vim normal gf (go to file), but in a vertical split (works with file.rb:123 line numbers also)
+ * `,gf` - same as vim normal gf (go to file), but in a vertical split (works with file.rb:123 line numbers also)
  * `gF` - standard vim mapping, here for completeness (go to file at line number)
  * `,k` - Search the current word under the cursor and show results in quickfix window
  * `,K` - Grep the current word up to next exclamation point (useful for ruby foo! methods)
  * `Cmd-*` - highlight all occurrences of current word (similar to regular `*` except doesn't move)
  * `,hl` - toggle search highlight on and off
- * `,gg` or `,ag` - Grep command line, type between quotes. Uses Ag Silver Searcher.
+ * `,gg` - Grep command line, type between quotes. Uses Ag Silver Searcher.
  * After searching with `,gg` you can navigate the results with `Ctrl-x` and `Ctrl-z` (or standard vim `:cn` and `:cp`)
  * `,gd` - Grep def (greps for 'def [function name]') when cursor is over the function name
  * `,gcf` - Grep Current File to find references to the current file
